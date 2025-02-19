@@ -1,0 +1,8 @@
+wildfly:
+  rules:
+    - id: id-1
+      title: test
+      body: test
+  format:
+    title:
+      message: Wrong content of the PR title
