@@ -1,0 +1,9 @@
+wildfly:
+  format:
+    skip:
+      - "issue not (required|needed)"
+      - "big chungus"
+    description:
+      regexes:
+        - pattern: "https://redhat.atlassian.net/browse/WFLY-\\d+"
+          message: "The description must contain a link to the JIRA issue \n(https://redhat.atlassian.net/browse/WFLY-XYZ)"
