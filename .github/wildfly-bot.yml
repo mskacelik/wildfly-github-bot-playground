@@ -1,0 +1,15 @@
+wildfly:
+  rules:
+    - id: id-1
+      title: "test"
+      body: "test"
+      notify:
+        - xstefank
+        - petrberan
+  format:
+    title:
+      enabled: false
+      message: "Wrong content of the PR title"
+  emails:
+    - nonexisistingemail@whatever.com
+    - whoever@nonexistingmailingservice.com
