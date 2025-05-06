@@ -1,0 +1,25 @@
+name: Test Jobs
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  sleep-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sleep for 10 seconds
+        run: sleep 10
+
+  flaky-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Flaky test (50% pass/fail)
+        run: |
+          if [ $((RANDOM % 2)) -eq 0 ]; then
+            echo "Test passed!"
+            exit 0
+          else
+            echo "Test failed!"
+            exit 1
+          fi
