@@ -1,18 +1,4 @@
 wildfly:
-  rules:
-    - id: id-1
-      title: test
-      body: test
-      notify:
-        - xstefank
-        - petrberan
   format:
-    title:
-      message: Wrong content of the PR title
-    description:
-      regexes:
-        - pattern: JIRA:\s+https://issues.redhat.com/browse/WFLY-\d+|https://issues.redhat.com/browse/WFLY-\d+
-          message: The PR description must contain a link to the JIRA issue
-  emails:
-    - foo@bar.baz
-    - user@acme.org
+    commit:
+      message: 'Test commit %s'
